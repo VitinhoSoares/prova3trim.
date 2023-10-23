@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Idade Canina</title>
+</head>
+<body>
+    <script>
+        function Calcular() {
+            let idadeCanina = parseFloat(prompt("Qual a idade do cachorrinho?"));
+            let idadeHumana = idadeCanina * 7;
+            let classificacao = "";
+
+            if (idadeHumana <= 11) {
+                classificacao = "criança";
+            } else if (idadeHumana <= 17) {
+                classificacao = "adolescente";
+            } else if (idadeHumana <= 29) {
+                classificacao = "jovem";
+            } else if (idadeHumana <= 59) {
+                classificacao = "adulto";
+            } else {
+                classificacao = "idoso";
+            }
+
+            mostraResultado.textContent = "Resultado: A idade humana do cachorrinho é " + idadeHumana + " anos. Ele é um " + classificacao + ".";
+        }
+    </script>
+
+    <h1>Calculadora de Idade Canina</h1>
+    <p>Informe a idade do cachorrinho para calcular sua idade humana e classificá-lo:</p>
+    <button onclick="Calcular()">Calcular Idade</button>
+    <p id="mostraResultado"></p>
+</body>
+</html>
